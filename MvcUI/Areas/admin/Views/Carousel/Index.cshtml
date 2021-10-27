@@ -1,0 +1,69 @@
+﻿@model List<CarouselViewModel>
+<div style="margin-left:250px; color:black">
+    <!-- Page Header Start -->
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Carousel</h2>
+                </div>
+                <div class="col-12">
+                    <a href="/">Carousel</a>
+                    <a href="/">Index</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <form>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="container">
+                    <table class="table table-hover table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Ad Soyad</th>
+                                <th scope="col">Başlıq</th>
+                                <th scope="col">Sloqan</th>
+                                <th scope="col">Şəkil</th>
+                                <th scope="col">Video</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{int i = 1; }
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <th scope="row">@i</th>
+                                <td>@item.NeedyPersonNameSureName</td>
+                                <td>@item.Title</td>
+                                <td>@item.CarouselText</td>
+                                <td><img src="/img/@item.Image" alt="shekil" width="100" height="100" /></td>
+                                <td>@item.Video</td>
+                                <td>@item.CarouselText</td>
+                                <td><button type="button" class="btn btn-success">Bax</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-success" style="background-color: cornflowerblue; border-color: cornflowerblue">Dəyişdir</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" style="background-color:red;border-color:red">Sil</button>
+                                </td>
+
+
+
+
+
+
+
+                            </tr>
+                                i++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
